@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Lab1.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <Color x:Key="PrimaryColor">#550088</Color>
+            <Color x:Key="SecondaryColor">#660022</Color>
+
+            <Style TargetType="Label" x:Key="FrameLabel">
+                <Setter Property="FontSize" Value="Large"/>
+                <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+                <Setter Property="VerticalOptions" Value="FillAndExpand"/>
+                <Setter Property="HorizontalTextAlignment" Value="Center"/>
+                <Setter Property="VerticalTextAlignment" Value="Center"/>
+                <Setter Property="BackgroundColor" Value="{DynamicResource PrimaryColor}"/>
+            </Style>
+
+            <Style TargetType="Label" x:Key="OrangeFrameLabel" BasedOn="{StaticResource FrameLabel}">
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="BackgroundColor" Value="{DynamicResource SecondaryColor}"/>
+            </Style>
+
+            <Style TargetType="Frame" x:Key="ButtomFrame">
+                <Setter Property="Padding" Value="0"/>
+                <Setter Property="Margin" Value="0"/>
+                <Setter Property="CornerRadius" Value="15"/>
+                <Setter Property="VerticalOptions" Value="FillAndExpand"/>
+                <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

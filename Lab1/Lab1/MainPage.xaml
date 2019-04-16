@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Lab1"
+             x:Class="Lab1.MainPage">
+
+    <Grid BackgroundColor="Black" ColumnSpacing="1" RowSpacing="1">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Switch Grid.Column="0" Grid.Row="0" Toggled="SwitchTheme_Toggled" />
+
+        <Label Text="{Binding CalcValue}" TextColor="White" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4" FontSize="Large" VerticalTextAlignment="Center" HorizontalTextAlignment="End" HorizontalOptions="EndAndExpand" />
+
+        <Frame Grid.Column="0" Grid.Row="1" Style="{StaticResource ButtomFrame}">
+            <Label Text="C" Style="{StaticResource FrameLabel}"/>
+        </Frame>
+        <Frame Grid.Column="1" Grid.Row="1" Style="{StaticResource ButtomFrame}">
+            <Label Text="+/-" Style="{StaticResource FrameLabel}"/>
+        </Frame>
+
+        <Frame Grid.Column="2" Grid.Row="1" Style="{StaticResource ButtomFrame}">
+            <Label Text="%" Style="{StaticResource FrameLabel}"/>
+        </Frame>
+
+        <Frame Grid.Column="3" Grid.Row="1" Style="{StaticResource ButtomFrame}">
+            <Label Text="/" Style="{StaticResource OrangeFrameLabel}"/>
+        </Frame>
+
+        <Frame Grid.Column="0" Grid.Row="2" Style="{StaticResource ButtomFrame}">
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding TapCommand}" CommandParameter="7"/>
+            </Frame.GestureRecognizers>
+            <Label Text="7" Style="{StaticResource FrameLabel}"/>
+        </Frame>
+
+        <Frame Grid.Column="1" Grid.Row="2" Style="{StaticResource ButtomFrame}">
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding TapCommand}" CommandParameter="8"/>
+            </Frame.GestureRecognizers>
+            <Label Text="8" Style="{StaticResource FrameLabel}"/>
+        </Frame>
+
+        <Frame Grid.Column="2" Grid.Row="2" Style="{StaticResource ButtomFrame}">
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding TapCommand}" CommandParameter="9"/>
+            </Frame.GestureRecognizers>
+            <Label Text="9" Style="{StaticResource FrameLabel}"/>
+        </Frame>
+
+        <Frame Grid.Column="3" Grid.Row="2" Style="{StaticResource ButtomFrame}">
+            <Label Text="X" Style="{StaticResource OrangeFrameLabel}"/>
+        </Frame>
+
+        <Frame Grid.Column="0" Grid.Row="3" Style="{StaticResource ButtomFrame}">
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding TapCommand}" CommandParameter="4"/>
+            </Frame.GestureRecognizers>
+            <Label Text="4" Style="{StaticResource FrameLabel}"/>
+        </Frame>
+
+        <Frame Grid.Column="1" Grid.Row="3" Style="{StaticResource ButtomFrame}">
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding TapCommand}" CommandParameter="5"/>
+            </Frame.GestureRecognizers>
+            <Label Text="5" Style="{StaticResource FrameLabel}"/>
+        </Frame>
+
+        <Frame Grid.Column="2" Grid.Row="3" Style="{StaticResource ButtomFrame}">
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding TapCommand}" CommandParameter="6"/>
+            </Frame.GestureRecognizers>
+            <Label Text="6" Style="{StaticResource FrameLabel}"/>
+        </Frame>
+
+        <Frame Grid.Column="3" Grid.Row="3" Style="{StaticResource ButtomFrame}">
+            <Label Text="-" Style="{StaticResource OrangeFrameLabel}"/>
+        </Frame>
+
+
+        <Frame Grid.Column="0" Grid.Row="4" Style="{StaticResource ButtomFrame}">
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding TapCommand}" CommandParameter="1"/>
+            </Frame.GestureRecognizers>
+            <Label Text="1" Style="{StaticResource FrameLabel}"/>
+        </Frame>
+
+        <Frame Grid.Column="1" Grid.Row="4" Style="{StaticResource ButtomFrame}">
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding TapCommand}" CommandParameter="2"/>
+            </Frame.GestureRecognizers>
+            <Label Text="2" Style="{StaticResource FrameLabel}"/>
+        </Frame>
+
+        <Frame Grid.Column="2" Grid.Row="4" Style="{StaticResource ButtomFrame}">
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding TapCommand}" CommandParameter="3"/>
+            </Frame.GestureRecognizers>
+            <Label Text="3" Style="{StaticResource FrameLabel}"/>
+        </Frame>
+
+        <Frame Grid.Column="3" Grid.Row="4" Style="{StaticResource ButtomFrame}">
+            <Label Text="+" Style="{StaticResource OrangeFrameLabel}"/>
+        </Frame>
+
+
+
+        <Frame Grid.Column="0" Grid.Row="5" Grid.ColumnSpan="2" Style="{StaticResource ButtomFrame}">
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding TapCommand}" CommandParameter="0"/>
+            </Frame.GestureRecognizers>
+            <Label Text="0" Style="{StaticResource FrameLabel}"/>
+        </Frame>
+
+        <Frame Grid.Column="2" Grid.Row="5" Style="{StaticResource ButtomFrame}">
+            <Label Text="," Style="{StaticResource FrameLabel}"/>
+        </Frame>
+
+        <Frame Grid.Column="3" Grid.Row="5" Style="{StaticResource ButtomFrame}">
+            <Label Text="=" Style="{StaticResource OrangeFrameLabel}"/>
+        </Frame>
+        
+    </Grid>
+ 
+</ContentPage>
